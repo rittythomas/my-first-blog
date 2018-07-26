@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,16 @@
 	<p>HI there</p>
 </div>
 <div>
-	<h1><a href="/">Django girls</a></h1>
+	<h1>Django girls</h1>
+
+{% for post in posts %}
+	</div>
+		<p>Published: {{ post.published_date }}</p>
+		<h1><a href = ""> {{ post.title }} </a></h1>
+		<p> {{ post.text|linebreaksbr }}</p>
+	<div>
+{% endfor %}
+	
 </div>
 
 </body>

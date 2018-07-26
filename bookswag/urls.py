@@ -17,7 +17,8 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 
+
 urlpatterns = [
     url('admin/', admin.site.urls),
->>>>>>> d78eab1889f906d01184da8e3a4252cdecd371d2
+    url('blog/',include('blog.urls')),
 ]
